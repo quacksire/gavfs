@@ -27,3 +27,14 @@ GAVFS is an open JSON specification for autonomous ride-hailing discovery, trip 
 Read the [draft 1.0 specification](spec/1.0.md), [example payloads](examples/README.md), and [contribution guidelines](CONTRIBUTING.md).
 
 This is an early draft, not a ratified standard. Field names and requirements may change before release.
+
+## Validation
+
+The repository includes [JSON Schemas](schema/README.md), [standalone example responses](examples/README.md), and a [GitHub Actions workflow](.github/workflows/validate.yml) for pull-request validation.
+
+```bash
+pip install -r requirements-dev.txt
+python scripts/validate.py
+```
+
+**Current limitations:** Schemas validate payload structure, but do not yet verify cross-feed IDs, GeoJSON topology, overlapping areas or all fare consistency rules. The draft is not yet implementation-certified.
