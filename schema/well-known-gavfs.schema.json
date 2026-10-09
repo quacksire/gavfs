@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GAVFS well-known discovery document",
+  "type": "object",
+  "required": [
+    "active",
+    "auth_needed"
+  ],
+  "properties": {
+    "active": {
+      "type": "boolean"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "auth_needed": {
+      "type": "boolean"
+    },
+    "docs": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    }
+  },
+  "if": {
+    "properties": {
+      "active": {
+        "const": true
+      }
+    },
+    "required": [
+      "active"
+    ]
+  },
+  "then": {
+    "required": [
+      "url"
+    ]
+  },
+  "additionalProperties": false
+}
