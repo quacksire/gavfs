@@ -1,3 +1,6 @@
 {
-  "url": "https://api.example.com/gavfs/gavfs.json"
+  "active": true,
+  "url": "https://api.example.com/gavfs/gavfs.json",
+  "auth_needed": true,
+  "docs": "https://example.com/developers/gavfs"
 }
