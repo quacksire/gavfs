@@ -28,7 +28,7 @@ This repository is a **specification**, not a production API or client applicati
 ## Conventions
 
 - `gavfs.json` is the manifest; `provider.json` is singular.
-- A provider MAY advertise a manifest URL through `/.well-known/gavfs.json` on its public domain; see the normative hosting section.
+- A provider SHOULD expose discovery metadata at `/.well-known/gavfs` on its public domain. The document has `active`, `url`, `auth_needed`, and optional `docs`; it is separate from the `gavfs.json` manifest. Authentication means consumer application credentials, not rider login.
 - `has_surge` indicates whether surge pricing can occur in a service area, not whether it is active now.
 - `fare.expires_at` is an optional price validity timestamp, not a booking reservation or guarantee.
 - All feed URLs use HTTPS. Coordinates use WGS 84. GeoJSON positions are longitude-first.
