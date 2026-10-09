@@ -1,0 +1,23 @@
+{
+  "last_updated": "2026-10-09T12:00:00Z",
+  "data": {
+    "products": [
+      {
+        "product_id": "standard",
+        "name": "Standard",
+        "description": "Private autonomous ride",
+        "capacity": {
+          "passengers": 4
+        },
+        "amenities": [
+          "climate_control",
+          "usb_charging"
+        ],
+        "accessibility": {
+          "wheelchair_accessible": false,
+          "service_animals_allowed": true
+        }
+      }
+    ]
+  }
+}
