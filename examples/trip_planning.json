@@ -10,7 +10,8 @@
         "fare": {
           "currency": "USD",
           "amount": 18.72,
-          "type": "estimated"
+          "type": "estimated",
+          "expires_at": "2026-10-09T12:05:00Z"
         },
         "booking": {
           "deep_link": "exampleav://ride?origin=37.77,-122.42&destination=37.78,-122.40&product=standard",
