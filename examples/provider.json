@@ -1,0 +1,17 @@
+{
+  "last_updated": "2026-10-09T12:00:00Z",
+  "data": {
+    "provider_id": "example_av",
+    "name": "Example AV",
+    "url": "https://example.com",
+    "timezone": "America/Los_Angeles",
+    "language": "en",
+    "support": {
+      "url": "https://example.com/support"
+    },
+    "booking": {
+      "deep_link": "exampleav://ride",
+      "web_url": "https://example.com/ride"
+    }
+  }
+}
