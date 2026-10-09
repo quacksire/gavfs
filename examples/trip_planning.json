@@ -1,0 +1,22 @@
+{
+  "last_updated": "2026-10-09T12:00:00Z",
+  "data": {
+    "trips": [
+      {
+        "product_id": "standard",
+        "pickup_eta_seconds": 240,
+        "duration_seconds": 900,
+        "distance_meters": 5300,
+        "fare": {
+          "currency": "USD",
+          "amount": 18.72,
+          "type": "estimated"
+        },
+        "booking": {
+          "deep_link": "exampleav://ride?origin=37.77,-122.42&destination=37.78,-122.40&product=standard",
+          "web_url": "https://example.com/ride?origin=37.77,-122.42&destination=37.78,-122.40"
+        }
+      }
+    ]
+  }
+}
