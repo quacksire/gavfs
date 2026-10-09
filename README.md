@@ -24,7 +24,9 @@ The specification is intended to support interoperability without requiring prov
 
 ## Hosting and discovery
 
-Providers publish a `gavfs.json` manifest at a stable HTTPS URL, such as `https://api.example.com/gavfs/gavfs.json`. A provider **SHOULD** also publish a small pointer at `https://example.com/.well-known/gavfs.json` that contains the manifest URL. See the [hosting rules](spec/1.0.md#hosting-and-discovery) and [well-known pointer example](examples/well-known-gavfs.json).
+A provider SHOULD expose an unauthenticated discovery document at `https://example.com/.well-known/gavfs`. It reports whether GAVFS is active, the manifest URL, whether application authentication is required, and a documentation link. The feed manifest itself may be hosted elsewhere, such as `https://api.example.com/gavfs/gavfs.json`.
+
+See the [discovery field reference](spec/1.0.md#well-known-discovery-document) and [example document](examples/well-known-gavfs.json).
 
 Trip planning fares MAY include `expires_at` to communicate how long the returned price remains valid. This does not imply a guaranteed quote.
 
