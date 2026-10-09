@@ -22,6 +22,12 @@ The specification is intended to support interoperability without requiring prov
 - Trip fares and pickup times are estimates unless expressly guaranteed.
 - `service_areas.json` includes `has_surge`, indicating whether surge pricing may occur in a service area.
 
+## Hosting and discovery
+
+Providers publish a `gavfs.json` manifest at a stable HTTPS URL, such as `https://api.example.com/gavfs/gavfs.json`. A provider **SHOULD** also publish a small pointer at `https://example.com/.well-known/gavfs.json` that contains the manifest URL. See the [hosting rules](spec/1.0.md#hosting-and-discovery) and [well-known pointer example](examples/well-known-gavfs.json).
+
+Trip planning fares MAY include `expires_at` to communicate how long the returned price remains valid. This does not imply a guaranteed quote.
+
 ## Resources
 
 | Resource | Description |
