@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GAVFS 1.0 manifest",
+  "type": "object",
+  "required": [
+    "last_updated",
+    "data",
+    "version"
+  ],
+  "properties": {
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "const": "1.0"
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "feeds"
+      ],
+      "properties": {
+        "feeds": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "url"
+            ],
+            "properties": {
+              "name": {
+                "enum": [
+                  "provider",
+                  "service_areas",
+                  "products",
+                  "eta",
+                  "trip_planning",
+                  "service_status"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
