@@ -1,0 +1,41 @@
+{
+  "last_updated": "2026-10-09T12:00:00Z",
+  "data": {
+    "service_areas": [
+      {
+        "area_id": "sf",
+        "name": "San Francisco",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -122.52,
+                37.7
+              ],
+              [
+                -122.35,
+                37.7
+              ],
+              [
+                -122.35,
+                37.83
+              ],
+              [
+                -122.52,
+                37.83
+              ],
+              [
+                -122.52,
+                37.7
+              ]
+            ]
+          ]
+        },
+        "pickup_allowed": true,
+        "dropoff_allowed": true,
+        "has_surge": false
+      }
+    ]
+  }
+}
