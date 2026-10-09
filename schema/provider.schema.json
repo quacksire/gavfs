@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GAVFS 1.0 provider",
+  "type": "object",
+  "required": [
+    "last_updated",
+    "data"
+  ],
+  "properties": {
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "provider_id",
+        "name",
+        "url",
+        "timezone",
+        "language",
+        "booking"
+      ],
+      "properties": {
+        "provider_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "type": "string",
+          "minLength": 2
+        },
+        "support": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "phone": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "booking": {
+          "type": "object",
+          "required": [
+            "deep_link"
+          ],
+          "properties": {
+            "deep_link": {
+              "type": "string",
+              "format": "uri"
+            },
+            "web_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "app_store_url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "play_store_url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
