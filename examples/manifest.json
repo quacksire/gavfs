@@ -1,0 +1,32 @@
+{
+  "last_updated": "2026-10-09T12:00:00Z",
+  "version": "1.0",
+  "data": {
+    "feeds": [
+      {
+        "name": "provider",
+        "url": "https://av.example/gavfs/provider.json"
+      },
+      {
+        "name": "service_areas",
+        "url": "https://av.example/gavfs/service_areas.json"
+      },
+      {
+        "name": "products",
+        "url": "https://av.example/gavfs/products.json"
+      },
+      {
+        "name": "eta",
+        "url": "https://av.example/gavfs/eta"
+      },
+      {
+        "name": "trip_planning",
+        "url": "https://av.example/gavfs/trip_planning"
+      },
+      {
+        "name": "service_status",
+        "url": "https://av.example/gavfs/service_status.json"
+      }
+    ]
+  }
+}
