@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GAVFS 1.0 eta",
+  "type": "object",
+  "required": [
+    "last_updated",
+    "data"
+  ],
+  "properties": {
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "location",
+        "estimates"
+      ],
+      "properties": {
+        "location": {
+          "type": "object",
+          "required": [
+            "lat",
+            "lon"
+          ],
+          "properties": {
+            "lat": {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "lon": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            }
+          },
+          "additionalProperties": false
+        },
+        "estimates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "product_id",
+              "pickup_eta_seconds"
+            ],
+            "properties": {
+              "product_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pickup_eta_seconds": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
